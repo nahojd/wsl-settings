@@ -5,6 +5,11 @@ DESTPATH=~
 #copy the stuff
 cp -rvi files/. $DESTPATH
 
+#install oh-my-zsh maybe?
+if [ ! -d "$DESTPATH/.oh-my-zsh" ]; then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
 #download vim plugins
 if [ ! -d "$DESTPATH/.vim/bundle" ]; then
 	mkdir $DESTPATH/.vim/bundle

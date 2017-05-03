@@ -11,6 +11,11 @@ You should have the following installed allready
 
 * vim
 * git
-* zsh - probably oh-my-zsh
+* zsh
 * tmux
 * mc
+* curl
+
+If not:
+sudo apt-get install vim git zsh tmux mc curl
+
