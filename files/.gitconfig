@@ -1,33 +1,22 @@
-[user]
-	name = Johan Driessen
-	email = johan@driessen.se
 [core]
-#	excludesfile = /Users/johan/.gitignore_global
+	autocrlf = false
 	editor = /usr/bin/vim
+
 [alias]
 	amend = git commit --amend
 	df = diff --no-ext-diff
 	dfx = diff --ext-diff
 	dag = log --oneline --graph --decorate --all --date-order 
 	
-[merge]
-	keepBackup = false;
-	tool = p4merge
-[mergetool "p4merge"]
-	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-	keepTemporaries = false
-	trustExitCode = false
-	keepBackup = false
-[diff]
-	external = p4diff
-#[difftool "sourcetree"]
-#	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge $LOCAL $REMOTE
-#	path = 
-#[mergetool "sourcetree"]
-#	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge $BASE $LOCAL $REMOTE
-#	trustExitCode = true
 [push]
 	default = simple
-[mergetool]
-	keepTemporaries = false
+
+[diff]
+	tool = vimdiff
 	prompt = false
+
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+	prompt = false
+	keepBackup = false
