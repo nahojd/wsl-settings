@@ -20,3 +20,6 @@
 	conflictstyle = diff3
 	prompt = false
 	keepBackup = false
+
+[include]
+	path = .gitconfig.local
