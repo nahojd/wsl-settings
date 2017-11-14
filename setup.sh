@@ -27,6 +27,10 @@ fi
 if [ ! -d "$DESTPATH/.vim/bundle/vim-airline" ]; then 
 	git clone https://github.com/bling/vim-airline
 fi
+if [ ! -d "$DESTPATH/.vim/bundle/vim-markdown" ]; then 
+	git clone https://github.com/plasticboy/vim-markdown
+fi
+
 cd -
 
 echo "\nAll done. More vimplugins at http://vimawesome.com.\n"
