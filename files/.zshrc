@@ -8,7 +8,9 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="mortalscumbag"
+#ZSH_THEME="mortalscumbag"
+#ZSH_THEME="agnoster"
+ZSH_THEME="pmcgee"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,7 +54,8 @@ ZSH_THEME="mortalscumbag"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mercurial npm zsh-syntax-highlighting)
+#plugins=(z git mercurial npm zsh-syntax-highlighting colored-man-pages themes)
+plugins=(z git zsh-syntax-highlighting colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,6 +91,11 @@ alias mc="mc -x --nosubshell"
 alias docker="/mnt/c/Program\ Files/Docker/Docker/resources/bin/docker.exe"
 alias docker-machine="/mnt/c/Program\ Files/Docker/Docker/resources/bin/docker-machine.exe"
 alias docker-compose="/mnt/c/Program\ Files/Docker/Docker/resources/bin/docker-componse.exe"
+function remember {
+	echo "$@" >> ~/stuff_to_remember.txt
+}
+alias remindme="cat ~/stuff_to_remember.txt"
+alias memedit="vim ~/stuff_to_remember.txt" 
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -101,3 +109,5 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 
 fi
+
+eval $(thefuck --alias)
