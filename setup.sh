@@ -10,6 +10,12 @@ fi
 #copy the stuff
 cp -rvi files/. $DESTPATH
 
+if ! [[ `uname -r` =~ "Microsoft" ]] 
+then
+	rm $DESTPATH/.zshrc.windows
+fi
+
+
 #download vim plugins
 if [ ! -d "$DESTPATH/.vim/bundle" ]; then
 	mkdir $DESTPATH/.vim/bundle

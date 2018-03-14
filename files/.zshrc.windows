@@ -1,0 +1,3 @@
+alias docker="/mnt/c/Program\ Files/Docker/Docker/resources/bin/docker.exe"
+alias docker-machine="/mnt/c/Program\ Files/Docker/Docker/resources/bin/docker-machine.exe"
+alias docker-compose="/mnt/c/Program\ Files/Docker/Docker/resources/bin/docker-componse.exe"

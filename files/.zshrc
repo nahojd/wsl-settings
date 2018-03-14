@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/johan/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -88,9 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias mc="mc -x --nosubshell"
-alias docker="/mnt/c/Program\ Files/Docker/Docker/resources/bin/docker.exe"
-alias docker-machine="/mnt/c/Program\ Files/Docker/Docker/resources/bin/docker-machine.exe"
-alias docker-compose="/mnt/c/Program\ Files/Docker/Docker/resources/bin/docker-componse.exe"
+
 function remember {
 	echo "$@" >> ~/stuff_to_remember.txt
 }
@@ -110,4 +108,11 @@ if [ -x /usr/bin/dircolors ]; then
 
 fi
 
-eval $(thefuck --alias)
+if [ -f ~/.zshrc.windows ]; then
+    source ~/.zshrc.windows
+fi
+
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
+
