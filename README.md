@@ -15,7 +15,8 @@ You should have the following installed allready
 * tmux
 * mc
 * curl
+* neofetch
 
 If not:
-sudo apt-get install vim git zsh tmux mc curl
+sudo apt install vim git zsh tmux mc curl neofetch
 
