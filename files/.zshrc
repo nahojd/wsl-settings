@@ -108,6 +108,11 @@ if [ -x /usr/bin/dircolors ]; then
 
 fi
 
+if [ -f ~/.zshrc.dotnet ]; then
+    source ~/.zshrc.dotnet
+fi
+
+
 if [ -f ~/.zshrc.windows ]; then
     source ~/.zshrc.windows
 fi
