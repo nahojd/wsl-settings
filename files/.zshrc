@@ -122,4 +122,5 @@ if [ -f ~/.zshrc.local ]; then
 fi
 
 eval "$(starship init zsh)"
-neofetch
+
+fastfetch

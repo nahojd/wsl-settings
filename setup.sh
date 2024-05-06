@@ -18,7 +18,7 @@ fi
 #copy the stuff
 cp -rvi files/. $DESTPATH
 
-if ! [[ `uname -r` =~ "Microsoft" ]] 
+if ! [[ `uname -r` =~ "microsoft" ]]
 then
 	rm $DESTPATH/.zshrc.windows
 fi

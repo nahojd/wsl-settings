@@ -15,8 +15,17 @@ You should have the following installed allready
 * tmux
 * mc
 * curl
-* neofetch
+* fastfetch (<https://github.com/fastfetch-cli/fastfetch>)
 
 If not:
 sudo apt install vim git zsh tmux mc curl neofetch
 
+Fastfetch for Ubuntu 22.04 or newer:
+
+```sh
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch && \
+sudo apt update && \
+sudo apt install fastfetch
+```
+
+Otherwise download binary from github releases.
