@@ -17,3 +17,5 @@ _dotnet_zsh_complete()
 
 compdef _dotnet_zsh_complete dotnet
 
+
+export DOTNET_CLI_TELEMETRY_OPTOUT=1

@@ -4,7 +4,7 @@ DESTPATH=~
 
 #install oh-my-zsh maybe?
 if [ ! -d "$DESTPATH/.oh-my-zsh" ]; then
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
 #install or update starship
@@ -12,10 +12,8 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 #add zsh-syntax-highlighting maybe?
 if [ ! -d "$DESTPATH/.oh-my-zsh/plugins/zsh-syntax-highlighting" ]; then
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $DESTPATH/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $DESTPATH/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 fi
-
-
 
 #copy the stuff
 cp -rvi files/. $DESTPATH
