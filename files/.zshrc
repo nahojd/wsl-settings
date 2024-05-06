@@ -117,10 +117,10 @@ if [ -f ~/.zshrc.windows ]; then
     source ~/.zshrc.windows
 fi
 
-if [ -f ~/.zshrc.local ]; then
-    source ~/.zshrc.local
-fi
-
 eval "$(starship init zsh)"
 
 fastfetch
+
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
